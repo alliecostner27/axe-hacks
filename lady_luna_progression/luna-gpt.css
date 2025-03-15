@@ -1,0 +1,24 @@
+
+.image-container {
+    text-align: right;
+    margin-top: -10px;
+    margin-right: 175px;
+    
+    
+}
+
+.image-container img {
+    width: 175px;
+    height: auto;
+    
+}
+
+button {
+    display: block;
+    background-color: #6f99f3;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+}

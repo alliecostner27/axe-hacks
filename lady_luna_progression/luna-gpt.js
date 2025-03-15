@@ -1,7 +1,11 @@
 // script.js
 
+let result = await fetch("http://localhost:3000/get");
 let totalTasks = 10; // total number of tasks
 let completedTasks = 0; // number of tasks completed
+
+
+
 
 const progressImage = document.getElementById("progress-image");
 const completeTaskBtn = document.getElementById("complete-task-btn");
@@ -18,10 +22,10 @@ function updateProgressImage() {
     
     // Change image based on task completion
     if (percentageCompleted === 100) {
-        progressImage.src = 'task_completed.png'; // Change to completed image
+        progressImage.src = '/images/FullMoon.png'; // Change to completed image
     } else if (percentageCompleted >= 50) {
-        progressImage.src = 'task_half.png'; // Change to half completed image
+        progressImage.src = '/images/HalfMoon.png'; // Change to half completed image
     } else {
-        progressImage.src = 'task_incomplete.png'; // Initial incomplete image
+        progressImage.src = '/images/NewMoon.png'; // Initial incomplete image
     }
 }
