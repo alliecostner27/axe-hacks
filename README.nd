@@ -1,0 +1,28 @@
+# 📝 Lunar Planner
+
+A simple and interactive to-do list web application where users can **add, organize, and manage tasks** with priority levels, deadlines, and categories. The app features **drag-and-drop reordering**, task filtering, and **local storage** support to keep tasks saved between sessions.
+
+## 🌟 Features
+
+✅ **Add Tasks** – Create tasks with a title, priority (Low, Medium, High), category, and due date.  
+✅ **Drag & Drop Reordering** – Easily rearrange tasks by dragging them.  
+✅ **Mark Tasks as Complete** – Check off completed tasks and filter them out.  
+✅ **Filter Tasks** – View tasks based on priority, category, or due date.  
+✅ **Persistent Storage** – Tasks are saved in **local storage**, so they remain even after refreshing the page.  
+
+## 🚀 Live Demo
+[🔗 Live Preview](#) _(Add your deployed link here once available)_
+
+## 🎥 Demo Screenshot
+![To-Do List Preview](#) _(Replace `#` with an actual screenshot URL)_
+
+## 🛠 Tech Stack
+- **HTML, CSS, JavaScript** – Frontend UI and functionality  
+- **Local Storage** – Persistent task storage  
+- **Drag & Drop API** – Enables smooth task reordering  
+
+## 📦 Installation & Setup
+1. **Clone the Repository**  
+   ```sh
+   git clone https://github.com/your-username/todo-list-priority.git
+   cd todo-list-priority
