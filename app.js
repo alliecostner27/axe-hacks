@@ -22,7 +22,7 @@ app.use(morgan('tiny'));
 app.use(methodOverride('_method'));
 
 // Handle favicon.ico requests
-app.get('/favicon.ico', (req, res) => res.status(204));
+// app.get('/favicon.ico', (req, res) => res.status(204));
 
 // Connect to MongoDB
 MongoClient.connect(url)

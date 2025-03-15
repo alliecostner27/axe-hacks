@@ -1,6 +1,6 @@
 // script.js
 
-let result = await fetch("http://localhost:3000/get");
+// let result = await fetch("http://localhost:3000/get");
 let totalTasks = 10; // total number of tasks
 let completedTasks = 0; // number of tasks completed
 
