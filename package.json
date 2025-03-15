@@ -1,0 +1,19 @@
+{
+  "name": "axe-hacks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alliecostner27/axe-hacks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alliecostner27/axe-hacks/issues"
+  },
+  "homepage": "https://github.com/alliecostner27/axe-hacks#readme",
+  "description": ""
+}
