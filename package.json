@@ -5,24 +5,30 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo hello"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alliecostner27/axe-hacks.git"
   },
-  "author": "",
+  "author": "destinee",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alliecostner27/axe-hacks/issues"
   },
   "homepage": "https://github.com/alliecostner27/axe-hacks#readme",
-  "description": "",
+  "description": "todos db setup",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.21.2",
+    "luxon": "^3.5.0",
     "method-override": "^3.0.0",
     "mongo": "^0.1.0",
-    "morgan": "^1.10.0"
-  }
+    "morgan": "^1.10.0",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^11.1.0"
+  },
+  "keywords": [
+    "todo"
+  ]
 }

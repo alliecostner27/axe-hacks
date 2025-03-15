@@ -7,14 +7,14 @@ exports.index = (req, res, next)=>{
 };
 
 exports.new = (req, res)=>{
-    res.render('./todo/new');
+    res.render('./todos/new');
 };
 
 exports.create = (req, res, next)=>{
-    //res.send('Created a new story');
-    let story = req.body;
-    story.createdAt = new Date();
-    model.save(story)
+    //res.send('Created a new todo)');
+    let todo = req.body;
+    todo.createdAt = new Date();
+    model.save(todo)
     .then(result => res.redirect('/todos'))
     .catch(err => next(err));
 };
@@ -22,9 +22,9 @@ exports.create = (req, res, next)=>{
 exports.show = (req, res, next)=>{
     let id = req.params.id; //string type
     model.findById(id)
-    .then(story => {
-        if(story) {
-            res.render('./todo/show', {story});
+    .then(todo => {
+        if(todo) {
+            res.render('./todo/show', {todo});
         } else {
             let err = new Error('Cannot find a planner with id ' + id);
             err.status = 404;
@@ -38,9 +38,9 @@ exports.show = (req, res, next)=>{
 exports.edit = (req, res, next)=>{
     let id = req.params.id;
     model.findById(id)
-    .then(story => 
-        {if(story) {
-        res.render('./todo/edit', {story});
+    .then(todo => 
+        {if(todo) {
+        res.render('./todo/edit', {todo});
         } else {
         let err = new Error('Cannot find a planner with id ' + id);
         err.status = 404;
@@ -51,10 +51,10 @@ exports.edit = (req, res, next)=>{
 };
 
 exports.update = (req, res, next)=>{
-    let story = req.body;
+    let todo = req.body;
     let id = req.params.id;
 
-    model.updateById(id, story)
+    model.updateById(id, todo)
     .then(result => {
         if(result.modifiedCount === 1){
             res.redirect('/todos/'+id)
@@ -83,5 +83,3 @@ exports.delete = (req, res, next)=>{
     })
     .catch(err => next(err));
 }
-
- 

@@ -1,6 +1,5 @@
 const { DateTime } = require("luxon");
 const {v4: uuidv4} = require('uuid');
-const {ObjectId} = require('mongodb');
 
 
 //need a reference variable to the stories collection in mongodb
