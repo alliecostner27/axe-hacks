@@ -3,22 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Item - My App</title>
+    <title>Create a new todo</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link your stylesheet -->
 </head>
 <body>
-    <h1>Add a New Item</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/add">Add Item</a></li>
-        </ul>
-    </nav>
-    <form action="/add" method="post">
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" required>
-        <button type="submit">Add</button>
-    </form>
+    <div class="container">
+        <div class="form-container">
+            <h1>Build Your Planner</h1>
+            <form action="/todos" method="POST">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+                <label for="content">Content</label>
+                <input type="text" name="content" id="content" required>
+                <label for="date">Date</label>
+                <input type="date" value="2025-03-15">
+                <label for="importance">Importance</label>
+                <select name="importance" id="importance">
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+                <button class="submit-button" type="submit">Create</button>
+            </form>
+        </div>
+        <div class="quote-container">
+            <h2>Motivational Quote</h2>
+            <p id="quote-text">Loading quote...</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const quotes = [
+                "Talk is cheap. Show me the code. ― Linus Torvalds",
+                "You should name a variable using the same care with which you name a first-born child. — Robert C. Martin",
+                "Its not a bug; its an undocumented feature. ― Anonymous",
+                "The best way to predict the future is to invent it. -Alan Kay",
+                "Innovation is not just about creating new ideas, but it’s also about executing them successfully. -Arun Pandit"
+            ];
+
+            // Get a random index from the quotes array
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quoteElement = document.getElementById("quote-text");
+
+            // Set the random quote
+            quoteElement.textContent = quotes[randomIndex];
+        });
+    </script>
 </body>
 </html>

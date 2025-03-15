@@ -1,19 +1,46 @@
-const { DateTime } = require("luxon");
-const {v4: uuidv4} = require('uuid');
+const { MongoClient, ObjectId } = require('mongodb');
 
+let db;
 
-//need a reference variable to the stories collection in mongodb
-let stories;
-exports.getCollection = db =>{
-    stories = db.collection('todos');
-}
+const connectDB = async (url) => {
+    const client = await MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+    db = client.db('todos');
+};
 
-exports.find = () => todos.find().toArray();
+const getCollection = () => {
+    return db.collection('todos');
+};
 
-exports.findById = id => todos.findOne({_id: new ObjectId(`${id}`)});
+const find = async () => {
+    const collection = getCollection();
+    return await collection.find().toArray();
+};
 
-exports.save = todo => todos.insertOne(todo);
+const findById = async (id) => {
+    const collection = getCollection();
+    return await collection.findOne({ _id: new ObjectId(id) });
+};
 
-exports.updateById =(id, newTodo) => todos.updateOne({_id: new ObjectId(`${id}`)}, {$set: {title: newTodo.title, content: newTodo.content}});
+const save = async (todo) => {
+    const collection = getCollection();
+    return await collection.insertOne(todo);
+};
 
-exports.deleteById = id => todos.deleteOne()
+const updateById = async (id, todo) => {
+    const collection = getCollection();
+    return await collection.updateOne({ _id: new ObjectId(id) }, { $set: todo });
+};
+
+const deleteById = async (id) => {
+    const collection = getCollection();
+    return await collection.deleteOne({ _id: new ObjectId(id) });
+};
+
+module.exports = {
+    connectDB,
+    find,
+    findById,
+    save,
+    updateById,
+    deleteById
+};

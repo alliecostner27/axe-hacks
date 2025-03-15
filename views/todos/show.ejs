@@ -1,0 +1,10 @@
+
+    <div class = "content">
+       <h4><%= todo.title%></h4>
+       <small>Posted <%= todo.createdAt%> by <%= todo.author%></small>
+       <div id = "todo"><%= todo.content%></div>
+       <form>
+          <button type = "submit" formmethod = "GET" formaction = "/todos/<%= todo._id%>/edit">Edit</button>
+          <button type = "submit" formmethod = "POST" formaction = "/todos/<%= todo._id%>?_method=DELETE">Delete</button>
+       </form>
+    </div>

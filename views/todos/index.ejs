@@ -1,0 +1,11 @@
+
+    <div class = "content">
+        <%if(todos.length) {%>
+            <p>Select a story to read</p>
+            <%todos.forEach(story=>{%>
+               <a href = "/todos/<%= todo._id%>"> <p><%= todo.title%></p></a>
+           <% });
+        } else {%>
+            <p>There are no stories to display.</p>
+        <%}%>
+    </div>
