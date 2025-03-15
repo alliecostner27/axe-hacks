@@ -1,6 +1,6 @@
 // Change the number of tasks here and in the JS
-$numberOfTasks: 10;
-$taskPercentage: 100 / $numberOfTasks / 100;
+$tasks: 10;
+$taskPercentage: 100 / $tasks / 100;
 
 $color: #00868b;
 
@@ -10,7 +10,7 @@ $color: #00868b;
 }
 
 $task-list: ();
-@for $i from 1 through $numberOfTasks {
+@for $i from 1 through $tasks {
   $task-list: append($task-list, (percentage($taskPercentage * $i))); 
 }
 

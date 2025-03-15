@@ -1,0 +1,21 @@
+// style.scss
+
+$image-size: 100px; // Define the size of the image (adjust as needed)
+
+.image-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container img {
+    width: $image-size;
+    height: auto;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
